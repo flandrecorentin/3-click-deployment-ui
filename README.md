@@ -2,6 +2,68 @@
 
 3-click-deployment-ui
 
+---
+
+# Opportunity to learn a little bit more about React
+
+## Next.js
+
+Image component allow automatic image optimization. In CRA (Create React App) manage image file as public URL as a string. Use [this step](https://nextjs.org/docs/app/guides/migrating/from-create-react-app#step-8-update-static-image-imports) to update
+
+Next.js support env var but requires *NEXT_PUBLIC_* prefix
+
+## React context
+
+- Bootstrap
+
+```{bash}
+// To install dependencies.boostrap into package.json"
+npm install bootstrap
+
+// To use boostrap
+import 'bootstrap/dist/css/bootstrap.css';
+```
+
+- Router
+
+## react library
+
+Most famous according to some blog
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import React, { Component, PureComponent } from 'react';
+
+// Hooks functions
+import React, { useState, useEffect, useContext, useReducer, useCallback, useMemo, useRef, useImperativeHandle, useLayoutEffect, useDebugValue } from 'react';
+
+import React, { Fragment } from 'react';
+
+import React, { memo } from 'react';
+
+import React, { forwardRef } from 'react';
+
+// to pass a ref through a component to one of its children
+import React, { lazy, Suspense } from 'react';
+
+// And some many others hooks functions or components from third-party libraries
+```
+
+## React details
+
+Difference between default export (work if A has the default export, whatever the name) vs named imported who name matter (myA and Something should exist)
+
+```{javascript}
+// only have one default export impossible but as many named exports as you'd like
+import B, { myA, Something as XSomething } from './A'
+```
+
+If you want to use absolute path for import, [check this section](https://create-react-app.dev/docs/importing-a-component#absolute-imports)
+
+---
+# Create React App default README.md
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
