@@ -1,14 +1,20 @@
-export default async function Page({
-    params
-}: {
-    params: Promise<{ script: string }>
-}) {
+export async function generateStaticParams() {
+    return [
+        { script: 'init-host' },
+        { script: 'flip-host' },
+        { script: 'install-agent' },
+    ];
+}
 
-    const { script } = await params
+const ScriptPage = ({ params }) => {
+    const { script } = params;
 
     return (
-        <ul>
-            script page {script}
-        </ul>
-    )
-}
+        <div>
+            <h1>Script: {script}</h1>
+            <p>This is the page for the script: {script}</p>
+        </div>
+    );
+};
+
+export default ScriptPage;
