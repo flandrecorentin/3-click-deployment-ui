@@ -1,11 +1,9 @@
-import Link from 'next/link'
-
-export default function NotFound() {
+const NotFoundPage = () => {
     return (
         <div>
-            <h2>Not Found</h2>
-            <p>Could not find requested resource</p>
-            <Link href="/public">Return Home</Link>
+            <h1>404 - Page Not Found</h1>
         </div>
-    )
-}
+    );
+};
+
+export default NotFoundPage;
