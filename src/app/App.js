@@ -1,4 +1,4 @@
-import CodePanel from "../../components/CodePanel";
+import CodePanel from "../components/CodePanel";
 
 function App() {
   return (
