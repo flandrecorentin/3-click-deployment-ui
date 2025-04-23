@@ -1,6 +1,14 @@
 # 3-click-deployment-ui
 
+This project is automatically deployed by 
 3-click-deployment-ui
+
+### Development
+
+To start application locally
+```
+npm run dev
+```
 
 ---
 
@@ -60,6 +68,15 @@ import B, { myA, Something as XSomething } from './A'
 ```
 
 If you want to use absolute path for import, [check this section](https://create-react-app.dev/docs/importing-a-component#absolute-imports)
+
+---
+# Css frameworks
+
+Check [these awesome recommendations](https://github.com/troxler/awesome-css-frameworks?tab=readme-ov-file) for css frameworks
+
+The [simplecss framework](https://simplecss.org/demo) is a very lightweight class-less css framework to stylize your webapp (you can acces the [test page](https://test.simplecss.org/))
+
+[for code hightlight](https://highlightjs.org/)
 
 ---
 # Create React App default README.md
