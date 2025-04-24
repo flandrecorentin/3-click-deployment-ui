@@ -14,7 +14,7 @@ function Footer() {
             {/*<p>Hello, the value is {value}</p>*/}
             <footer>
                 <p>Deployed with 3-click-deployment</p>
-                <Link href={`/contact`}>Contact page</Link>
+                <Link href={`/about`}>About page</Link>
                 <br></br>
                 <Link href={`/${'does-not-exist-' + Math.floor(Math.random() *10)}`}>Contact random page</Link>
                 <img src={logo.src} className="App-logo" alt="logo"/>
