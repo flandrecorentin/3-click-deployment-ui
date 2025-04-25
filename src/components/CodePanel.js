@@ -1,9 +1,12 @@
-import { Component } from 'react';
+// import { Component } from 'react';
 
-class CodePanel extends Component {
-    render() {
-        return 0;
-    }
+function CodePanel() {
+    return (
+        <code>
+            code line
+            code line;
+        </code>
+    );
 }
 
 export default CodePanel;

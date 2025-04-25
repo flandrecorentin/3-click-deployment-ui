@@ -1,5 +1,3 @@
-'use client'
-
 function About() {
     return (
         <div className="App">

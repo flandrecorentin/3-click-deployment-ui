@@ -1,6 +1,4 @@
-'use client'
-
-function Scripts() {
+function Page() {
     return (
         <ul>
             Scripts page
@@ -8,4 +6,4 @@ function Scripts() {
     )
 }
 
-export default Scripts;
+export default Page;

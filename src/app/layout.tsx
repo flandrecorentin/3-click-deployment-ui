@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import '../style/simple.min.css' // Automatically imported
 import '../style/custom.simple.css'
-import Header from "../non-body/Header";
-import Footer from "../non-body/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
     title: '3-click-deployment',
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
-}: {
-    children: React.ReactNode
-}) {
+}: Readonly<{
+    children: React.ReactNode;
+}>) {
     return (
         <html lang="en">
         <body>
