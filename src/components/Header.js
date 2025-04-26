@@ -1,5 +1,7 @@
 // import { useState } from 'react';
 
+import ColorSchemeButton from "./ColorSchemeButton";
+
 function Header() {
     // const [value, setValue] = useState(12);
 
@@ -17,6 +19,7 @@ function Header() {
             <header>
                 <h1>3-click-deployment</h1>
                 <code>test2</code>
+                {/*<ColorSchemeButton/>*/}
             </header>
         </>
     );
