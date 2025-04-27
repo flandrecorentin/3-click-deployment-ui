@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import '../style/simple.min.css' // Automatically imported
+import '../style/simple.min.css'
 import '../style/custom.simple.css'
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ColorSchemeButton from "@/components/ColorSchemeButton";
 
 export const metadata: Metadata = {
     title: '3-click-deployment',
@@ -19,7 +19,6 @@ export default function RootLayout({
         <html lang="en">
         <body>
             <Header></Header>
-            <ColorSchemeButton/>
             <main id="root">{children}</main>
             <Footer></Footer>
         </body>

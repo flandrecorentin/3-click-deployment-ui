@@ -1,3 +1,5 @@
+'use client'
+
 import CodePanel from "../components/CodePanel";
 
 function Page() {
