@@ -13,6 +13,8 @@ export function setCookie(name : string, value : string, days : number, path : s
 export function getCookie(name: string) {
     const value = `; ${document.cookie}`;
     const parts = value.split(`; ${name}=`);
-    if (parts != undefined && parts.length === 2) return parts.pop().split(';').shift();
+    if (parts != undefined && parts.pop() != null && parts.length === 2) { // @ts-ignore
+        return parts.pop().split(';').shift();
+    }
     return null;
 }
