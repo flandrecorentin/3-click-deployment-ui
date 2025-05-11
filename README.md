@@ -93,6 +93,21 @@ export async function getServerSideProps() {
 }
 ```
 
+Static Route
+The path / is marked as "static" since it will be prerendered during the build time.
+
+With Static Rendering, routes are rendered at build time, or in the background after data revalidation.
+
+Static rendering is useful when a route has data that is not personalized to the user and can be known at build time, such as a static blog post or a product page.
+
+```
+// Example to generate static routes for given set of locales
+// app/[lang]/layout.tsx
+export async function generateStaticParams() {
+  return [{ lang: 'en-US' }, { lang: 'de' }]
+}
+```
+
 ---
 
 # Opportunity to learn a little bit more about React

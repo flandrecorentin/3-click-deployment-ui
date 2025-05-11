@@ -3,23 +3,47 @@
 import  { useEffect } from 'react';
 
 import {getLang, setLang, Lang} from "./GlobalContext";
-import {getCookie, setCookie} from "./CookieContext";
+import {setCookie} from "./CookieContext";
+import {updateDictionnary} from "@/context/Dictionnary";
+
+export function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts != undefined  && parts.length === 2) {
+        // @ts-ignore
+        return parts.pop().split(';').shift();
+    }
+    return null;
+}
 
 function LangButton() {
 
     // useEffect run only one time after rendering
     useEffect(() => {
-        if (getCookie('lang') === null || getCookie('lang') === undefined) {
-            console.log("Default lang is ", Lang.EN)
-            clickLang(Lang.EN)
-        }
+        // const cookieLang = getCookie('lang')
+        // if (cookieLang === null || cookieLang === undefined) {
+        //     console.log("Default lang is ", Lang.EN)
+        //     // clickLang(Lang.EN)
+        //     setLang(value)
+        //     setCookie('lang', value, 1)
+        // }
+        if (getCookie('lang') === null) setCookie('lang', Lang.EN, 1)
+        // setLang(getCookie('lang'))
+        console.log('cookie at useEffect: ' + getCookie('lang'))
     }, []);
 
     function clickLang(value) {
         console.log('clickLang with ' + value)
-        setLang(value)
+        if (value === getLang()) {
+            console.log(value + ' is already the current lang in cookie')
+            return;
+        }
+        // setLang(value)
         setCookie('lang', value, 1)
-        console.log(getCookie('lang'))
+        updateDictionnary()
+        console.log("he")
+        location.reload()
+        // console.log(getCookie('lang'))
     }
 
     return (

@@ -9,6 +9,6 @@ export function setLang(value : Lang) {
     lang = value
 }
 
-export function getLang(value : Lang) {
+export function getLang() {
     return lang
 }
